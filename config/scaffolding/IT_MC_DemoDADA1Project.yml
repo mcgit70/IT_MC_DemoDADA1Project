@@ -8,6 +8,12 @@ packages:
   gitUsername: mcgit70
   gitBranch: main
 - name: MCHelloWorld
+  version: "1.0"
+  gitServerName: IT_MC_GIT
+  gitUrl: https://github.com/mcgit70
+  gitUsername: mcgit70
+  gitBranch: main
+- name: MCUtils
   gitServerName: IT_MC_GIT
   gitUrl: https://github.com/mcgit70
   gitUsername: mcgit70
