@@ -19,26 +19,21 @@ packages:
   gitUrl: https://github.com/mcgit70
   gitUsername: mcgit70
   gitBranch: main
-- name: MCDemoSQLCloud
-  gitServerName: IT_MC_GIT
-  gitUrl: https://github.com/mcgit70
-  gitUsername: mcgit70
-  gitBranch: main
 configurationVariables:
   jdbc.O2C_DB_CONN.maxConns: "10"
   jdbc.O2C_DB_CONN.expireTime: "60000"
   jdbc.O2C_DB_CONN.description: This connection is for getting customer data based
     on the O2C project
+  jdbc.O2C_DB_CONN.poolThreshold: "0"
   jdbc.O2C_DB_CONN.waitingThread: "0"
   jdbc.O2C_DB_CONN.userid: aaidadbs3user
+  jdbc.O2C_DB_CONN.useSSL: "false"
   jdbc.O2C_DB_CONN.snoopenabled: "false"
   jdbc.O2C_DB_CONN.dbURL: jdbc:wm:postgresql://169.51.141.229:5432;DatabaseName=aaidadbs3
   jdbc.O2C_DB_CONN.minConns: "0"
   jdbc.O2C_DB_CONN.spyenabled: "false"
+  jdbc.O2C_DB_CONN.password: "{AES}jmqLB/WxtoLGSxa3UBUaTA=="
   jdbc.O2C_DB_CONN.snoopparms: "ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/[object\
     \ Object].log;ddtdbg.ProtocolTraceShowTime=true"
-  jdbc.O2C_DB_CONN.spyparms: "SpyAttributes=(log=(file)logs/spy/[object Object].log;logTName=yes;timestamp=yes)"
-  jdbc.O2C_DB_CONN.poolThreshold: "0"
-  jdbc.O2C_DB_CONN.useSSL: "false"
-  jdbc.O2C_DB_CONN.password: "{AES}jmqLB/WxtoLGSxa3UBUaTA=="
   jdbc.O2C_DB_CONN.driverAlias: DataDirect Connect JDBC PostgreSQL Driver
+  jdbc.O2C_DB_CONN.spyparms: "SpyAttributes=(log=(file)logs/spy/[object Object].log;logTName=yes;timestamp=yes)"
