@@ -98,7 +98,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">Claudio.Marconi@ibm.com</value>
-    <value name="lastModifiedDate">1763628592832</value>
+    <value name="lastModifiedDate">1763628931911</value>
     <value name="displayName">bytesGenerator</value>
     <value name="description"></value>
     <record name="stepNodeHints" javaclass="com.wm.util.Values">
@@ -132,6 +132,39 @@
           <value name="groupName">string</value>
           <value name="groupDisplayName">String</value>
         </record>
+      </record>
+      <record name="/1" javaclass="com.wm.util.Values">
+        <value name="itemType">CONTROLS</value>
+        <value name="name">TRANSFORM</value>
+        <number name="ui_step_index" type="Long">2</number>
+        <value name="nodePathNew">1</value>
+        <number name="nodeIndex" type="Long">1</number>
+        <number name="lineNumberForDebug" type="Long">2</number>
+        <array name="map" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="mapSet" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="mapDelete" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="transformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+      </record>
+      <record name="/1/0" javaclass="com.wm.util.Values">
+        <value name="itemType">SERVICES</value>
+        <Boolean name="serviceReferenceResolved">true</Boolean>
+        <record name="serviceName" javaclass="com.wm.util.Values">
+          <value name="displayName">base64Encode</value>
+          <value name="serviceName">pub.string:base64Encode</value>
+          <value name="transformerSupport">true</value>
+        </record>
+        <record name="serviceInfo" javaclass="com.wm.util.Values">
+          <value name="groupName">string</value>
+          <value name="groupDisplayName">String</value>
+        </record>
+        <array name="mapSet" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
       </record>
     </record>
   </record>
