@@ -45,15 +45,32 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">Claudio.Marconi@ibm.com</value>
-    <value name="createdDate">1763629090174</value>
-    <value name="lastModifiedDate">1763629090174</value>
+    <value name="lastModifiedBy">Claudio.Marconi@ibm.com</value>
+    <value name="lastModifiedDate">1763629169234</value>
     <value name="displayName">serviceOrchestrator</value>
     <value name="description"></value>
     <record name="stepNodeHints" javaclass="com.wm.util.Values">
       <record name="/0" javaclass="com.wm.util.Values">
-        <value name="itemType">ALL</value>
-        <value name="name">NEW</value>
+        <value name="name">bytesGenerator</value>
+        <value name="displayName">bytesGenerator</value>
+        <value name="itemType">INTEGRATIONS</value>
+        <number name="ui_step_index" type="Long">1</number>
+        <value name="nodePathNew">0</value>
+        <number name="nodeIndex" type="Long">0</number>
+        <number name="lineNumberForDebug" type="Long">1</number>
+        <null name="mapSet"/>
+        <null name="outputMapSet"/>
+        <Boolean name="xmlMapsetSupported">true</Boolean>
+      </record>
+      <record name="/1" javaclass="com.wm.util.Values">
+        <value name="name">bytesDecoder</value>
+        <value name="displayName">bytesDecoder</value>
+        <value name="itemType">INTEGRATIONS</value>
+        <value name="nodePathNew">1</value>
+        <number name="nodeIndex" type="Long">1</number>
+        <number name="lineNumberForDebug" type="Long">2</number>
+        <null name="mapSet"/>
+        <null name="outputMapSet"/>
       </record>
     </record>
   </record>
