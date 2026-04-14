@@ -1,0 +1,9 @@
+version: "1.0"
+projectName: IT_MC_DemoDADA1Project
+runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: fld_113520462_stage00.projects.fla3d2851d02a5eb26510139.integrations:DummyTest
+    type: flow
+    stepId: /0
+    reference: fld_113520462_stage00.projects.fla3d2851d02a5eb26510139.WmPackageServiceProvider.wmx.mc.utils.is:getSysInfoData
