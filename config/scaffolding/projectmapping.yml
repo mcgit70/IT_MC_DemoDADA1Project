@@ -7,3 +7,10 @@ runtimes:
     type: flow
     stepId: /0
     reference: fld_113520462_stage00.projects.fla3d2851d02a5eb26510139.WmPackageServiceProvider.wmx.mc.utils.is:getSysInfoData
+- runtimeAlias: IT_MC_VRT1
+  assets:
+  - name: DemoEdgeBasedQueryingDB
+    type: workflow
+    uid: fl2a3902aab595d8450b44a8
+    stepId: a0
+    reference: MCDemoSQLCloud.flow:getRegulatoryReportList
