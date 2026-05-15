@@ -14,6 +14,7 @@ packages:
   gitUsername: mcgit70
   gitBranch: main
 - name: MCDemoSQLCloud
+  version: "1.0"
   gitServerName: IT_MC_GIT
   gitUrl: https://github.com/mcgit70
   gitUsername: mcgit70
@@ -24,21 +25,191 @@ packages:
   gitUrl: https://github.com/mcgit70
   gitUsername: mcgit70
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+services:
+- serviceName: project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:IT_MC_AzureDBConn
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
+- serviceName: project.it_mc_demodada1.integrations:TestMe
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
+- serviceName: project.it_mc_demodada1.integrations:bytesDecoder
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
+- serviceName: project.it_mc_demodada1.integrations:bytesGenerator
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.828
+- serviceName: project.it_mc_demodada1.integrations:getRegulatoryReportDAF
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
+- serviceName: project.it_mc_demodada1.integrations:serviceOrchestrator
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
+- serviceName: project.it_mc_demodada1.integrations:serviceOrchestrator2
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
+- serviceName: project.it_mc_demodada1.integrations:testCloud
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
+- serviceName: wmx.mc.utils.is:getSysInfoData
+  packages:
+  - name: MCUtils
+    version: "2.0"
 configurationVariables:
-  jdbc.O2C_DB_CONN.maxConns: "10"
-  jdbc.O2C_DB_CONN.expireTime: "60000"
-  jdbc.O2C_DB_CONN.poolThreshold: "0"
-  jdbc.O2C_DB_CONN.description: This connection is for getting customer data based
-    on the O2C project
-  jdbc.O2C_DB_CONN.waitingThread: "0"
   jdbc.O2C_DB_CONN.userid: aaidadbs3user
-  jdbc.O2C_DB_CONN.useSSL: "false"
-  jdbc.O2C_DB_CONN.snoopenabled: "false"
-  jdbc.O2C_DB_CONN.dbURL: jdbc:wm:postgresql://169.51.141.229:5432;DatabaseName=aaidadbs3
   jdbc.O2C_DB_CONN.minConns: "0"
   jdbc.O2C_DB_CONN.spyenabled: "false"
-  jdbc.O2C_DB_CONN.password: "{AES}jmqLB/WxtoLGSxa3UBUaTA=="
   jdbc.O2C_DB_CONN.snoopparms: "ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/[object\
     \ Object].log;ddtdbg.ProtocolTraceShowTime=true"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.user
+  : dbgod
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.databaseName
+  : DBIWHI
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.trustStore
+  : ""
+  jdbc.O2C_DB_CONN.useSSL: "false"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionEnabled
+  : "false"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.portNumber
+  : "1433"
   jdbc.O2C_DB_CONN.driverAlias: DataDirect Connect JDBC PostgreSQL Driver
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.expireTimeout
+  : "1000"
+  jdbc.O2C_DB_CONN.maxConns: "10"
+  jdbc.O2C_DB_CONN.expireTime: "60000"
+  jdbc.O2C_DB_CONN.description: This connection is for getting customer data based
+    on the O2C project
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.poolable
+  : "true"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.minimumPoolSize
+  : "1"
+  jdbc.O2C_DB_CONN.waitingThread: "0"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.dbType
+  : MSSQL
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.password
+  : "{AES}hpWcCdFpOLYbHQts8mwRPA=="
+  jdbc.O2C_DB_CONN.snoopenabled: "false"
+  jdbc.O2C_DB_CONN.dbURL: jdbc:wm:postgresql://169.51.141.229:5432;DatabaseName=aaidadbs3
   jdbc.O2C_DB_CONN.spyparms: "SpyAttributes=(log=(file)logs/spy/[object Object].log;logTName=yes;timestamp=yes)"
+  jdbc.O2C_DB_CONN.poolThreshold: "0"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.driverType
+  : MS_SQL_42
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.serverName
+  : mcsql-db1.database.windows.net
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.transactionType
+  : NO_TRANSACTION
+  jdbc.O2C_DB_CONN.password: "{AES}jmqLB/WxtoLGSxa3UBUaTA=="
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.keyStore
+  : ""
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.datasourceClass
+  : com.microsoft.sqlserver.jdbc.SQLServerDataSource
