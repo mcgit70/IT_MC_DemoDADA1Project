@@ -30,21 +30,7 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
-- serviceName: project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:IT_MC_AzureDBConn
-  packages:
-  - name: IT_MC_DemoDADA1Project
-    version: "1.0"
-  - name: MCUtils
-    version: "2.0"
-  - name: MCDemoSQLCloud
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
-  - name: MCHelloWorld
-    version: "1.0"
-- serviceName: project.it_mc_demodada1.integrations:TestMe
+- serviceName: project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:IT_MC_AzureDB
   packages:
   - name: IT_MC_DemoDADA1Project
     version: "1.0"
@@ -151,23 +137,31 @@ services:
   - name: MCUtils
     version: "2.0"
 configurationVariables:
+  jdbc.SAP TxStore Pool.maxConns: "10"
+  jdbcfunc.SAPTxStore.failFastMode: false
+  jdbc.SAP TxStore Pool.poolThreshold: "0"
   jdbc.O2C_DB_CONN.userid: aaidadbs3user
   jdbc.O2C_DB_CONN.minConns: "0"
+  jdbc.SAP TxStore Pool.spyenabled: "false"
   jdbc.O2C_DB_CONN.spyenabled: "false"
+  jdbc.SAP TxStore Pool.useSSL: "false"
   jdbc.O2C_DB_CONN.snoopparms: "ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/[object\
     \ Object].log;ddtdbg.ProtocolTraceShowTime=true"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.heartBeatInterval
   : "0"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.blockingTimeout
   : "1000"
+  jdbc.SAP TxStore Pool.password: "{AES}nrGf3u7Wt20hFBGh5ZeEuQ=="
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.user
   : dbgod
+  jdbc.SAP TxStore Pool.spyparms: SpyAttributes=(log=(file)logs/spy/SAP_TxStore_Pool.log;logTName=yes;timestamp=yes)
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.maximumPoolSize
   : "10"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.startupBackoffSecs
   : "10"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.databaseName
   : DBIWHI
+  jdbc.SAP TxStore Pool.snoopenabled: "false"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.poolIncrementSize
   : "1"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.trustStore
@@ -175,13 +169,17 @@ configurationVariables:
   jdbc.O2C_DB_CONN.useSSL: "false"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.startupRetryCount
   : "0"
+  jdbc.SAP TxStore Pool.expireTime: "60000"
+  jdbc.SAP TxStore Pool.minConns: "5"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionEnabled
   : "false"
+  jdbc.SAP TxStore Pool.driverAlias: MySQL CC Driver
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.portNumber
   : "1433"
   jdbc.O2C_DB_CONN.driverAlias: DataDirect Connect JDBC PostgreSQL Driver
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.expireTimeout
   : "1000"
+  jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
   jdbc.O2C_DB_CONN.maxConns: "10"
   jdbc.O2C_DB_CONN.expireTime: "60000"
   jdbc.O2C_DB_CONN.description: This connection is for getting customer data based
@@ -198,15 +196,20 @@ configurationVariables:
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.password
   : "{AES}hpWcCdFpOLYbHQts8mwRPA=="
   jdbc.O2C_DB_CONN.snoopenabled: "false"
+  jdbc.SAP TxStore Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
   jdbc.O2C_DB_CONN.dbURL: jdbc:wm:postgresql://169.51.141.229:5432;DatabaseName=aaidadbs3
+  jdbc.SAP TxStore Pool.waitingThread: "10"
+  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
   jdbc.O2C_DB_CONN.spyparms: "SpyAttributes=(log=(file)logs/spy/[object Object].log;logTName=yes;timestamp=yes)"
   jdbc.O2C_DB_CONN.poolThreshold: "0"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.driverType
   : MS_SQL_42
+  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.serverName
   : mcsql-db1.database.windows.net
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.networkProtocol
   : ""
+  jdbc.SAP TxStore Pool.userid: root
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.transactionType
   : NO_TRANSACTION
   jdbc.O2C_DB_CONN.password: "{AES}jmqLB/WxtoLGSxa3UBUaTA=="
