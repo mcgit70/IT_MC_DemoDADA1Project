@@ -19,3 +19,8 @@ runtimes:
     uid: fl2a3902aab595d8450b44a8
     stepId: a3
     reference: project.it_mc_demodada1.integrations:getRegulatoryReportDAF
+  - name: WF_HelloWorld
+    type: workflow
+    uid: fl0f8324ab0524393085629c
+    stepId: a0
+    reference: MCHelloWorld.flow:helloWorld
