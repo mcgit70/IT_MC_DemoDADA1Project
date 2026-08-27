@@ -9,21 +9,21 @@
   <null name="shutdown_services"/>
   <null name="replication_services"/>
   <record name="requires" javaclass="com.wm.util.Values">
-    <value name="MCUtils">2.0</value>
     <value name="MCDemoSQLCloud">1.0</value>
     <value name="MCHelloWorld">1.0</value>
     <value name="WmJDBCAdapter">10.3.0.0.34</value>
+    <value name="MCUtils">2.0</value>
   </record>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">110</value>
+  <value name="build">111</value>
   <null name="description"/>
   <value name="created_date">12-11-2025 10:48:11 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2026-08-25T11:08:07.335683231Z</value>
+  <value name="lastUpdated">2026-08-27T13:24:06.498903698Z</value>
   <value name="wmProjectId">fla3d2851d02a5eb26510139</value>
   <value name="creator">Claudio Marconi</value>
   <value name="lazy_load">yes</value>
