@@ -44,6 +44,20 @@ services:
     wpmRegistry: licensed
   - name: MCHelloWorld
     version: "1.0"
+- serviceName: project.it_mc_demodada1.integrations:DemoTestDAF
+  packages:
+  - name: IT_MC_DemoDADA1Project
+    version: "1.0"
+  - name: MCUtils
+    version: "2.0"
+  - name: MCDemoSQLCloud
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: MCHelloWorld
+    version: "1.0"
 - serviceName: project.it_mc_demodada1.integrations:bytesDecoder
   packages:
   - name: IT_MC_DemoDADA1Project
@@ -75,7 +89,7 @@ services:
 - serviceName: pub.flow:debugLog
   packages:
   - name: WmPublic
-    version: 12.1.0.0.828
+    version: 12.1.0.0.1032
 - serviceName: project.it_mc_demodada1.integrations:getRegulatoryReportDAF
   packages:
   - name: IT_MC_DemoDADA1Project
@@ -139,10 +153,10 @@ configurationVariables:
   jdbc.SAP TxStore Pool.spyparms: SpyAttributes=(log=(file)logs/spy/SAP_TxStore_Pool.log;logTName=yes;timestamp=yes)
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.maximumPoolSize
   : "10"
-  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.databaseName
-  : DBIWHI
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.startupBackoffSecs
   : "10"
+  ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionSettings.databaseName
+  : DBIWHI
   jdbc.SAP TxStore Pool.snoopenabled: "false"
   ? artConnection.IT_MC_DemoDADA1Project.project.it_mc_demodada1.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.IT_MC_AzureDBConn.connectionManagerSettings.poolIncrementSize
   : "1"
