@@ -90,20 +90,6 @@ services:
   packages:
   - name: WmPublic
     version: 12.1.0.0.1032
-- serviceName: project.it_mc_demodada1.integrations:getRegulatoryReportDAF
-  packages:
-  - name: IT_MC_DemoDADA1Project
-    version: "1.0"
-  - name: MCUtils
-    version: "2.0"
-  - name: MCDemoSQLCloud
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
-  - name: MCHelloWorld
-    version: "1.0"
 - serviceName: project.it_mc_demodada1.integrations:serviceOrchestrator
   packages:
   - name: IT_MC_DemoDADA1Project
